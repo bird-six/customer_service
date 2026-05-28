@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>智能客服</title>
+  <link rel="stylesheet" href="/font/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="badge">Smart Support</div>
+        <h1>智能客服</h1>
+        <p class="subtitle">支持产品咨询、售后答疑、订单问题与知识库检索。</p>
+      </div>
+      <div class="tips">
+        <h2>使用提示</h2>
+        <ul>
+          <li>请输入清晰的问题描述</li>
+          <li>涉及订单、退款等信息时建议补充更多上下文</li>
+          <li>系统会优先基于知识库回答</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="chat-card">
+      <header class="chat-header">
+        <div>
+          <h2>客服聊天窗口</h2>
+          <p id="statusText">已连接到后端接口</p>
+        </div>
+        <button id="clearBtn" class="ghost-btn" type="button">清空对话</button>
+      </header>
+
+      <section id="messageList" class="message-list" aria-live="polite"></section>
+
+      <form id="chatForm" class="composer">
+        <textarea id="queryInput" rows="3" placeholder="请输入您的问题，例如：如何申请退款？"></textarea>
+        <div class="composer-actions">
+          <button id="sendBtn" type="submit">发送</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="/font/app.js"></script>
+</body>
+</html>
